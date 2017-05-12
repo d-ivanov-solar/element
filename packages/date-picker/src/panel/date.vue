@@ -49,28 +49,18 @@
           <div class="el-date-picker__header" v-show="currentView !== 'time'">
             <button
               type="button"
-              @click="prevYear"
-              class="el-picker-panel__icon-btn el-date-picker__prev-btn el-icon-d-arrow-left">
-            </button>
-            <button
-              type="button"
               @click="prevMonth"
               v-show="currentView === 'date'"
               class="el-picker-panel__icon-btn el-date-picker__prev-btn el-icon-arrow-left">
             </button>
             <span
-              @click="showYearPicker"
-              class="el-date-picker__header-label">{{ yearLabel }}</span>
-            <span
               @click="showMonthPicker"
               v-show="currentView === 'date'"
               class="el-date-picker__header-label"
-              :class="{ active: currentView === 'month' }">{{t(`el.datepicker.month${ month + 1 }`)}}</span>
-            <button
-              type="button"
-              @click="nextYear"
-              class="el-picker-panel__icon-btn el-date-picker__next-btn el-icon-d-arrow-right">
-            </button>
+              :class="{ active: currentView === 'month' }">{{t(`el.datepicker.month${ month + 1 }`)}},</span>
+            <span
+              @click="showYearPicker"
+              class="el-date-picker__header-label">{{ yearLabel }}</span>
             <button
               type="button"
               @click="nextMonth"

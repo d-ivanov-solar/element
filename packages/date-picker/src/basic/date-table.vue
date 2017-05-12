@@ -18,7 +18,7 @@
       <td
         v-for="cell in row"
         :class="getCellClasses(cell)"
-        v-text="cell.type === 'today' ? t('el.datepicker.today') : cell.text"></td>
+        v-text="cell.text"></td>
     </tr>
     </tbody>
   </table>
